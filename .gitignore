@@ -1,0 +1,51 @@
+# ------------------------------ #
+#            General             #
+# ------------------------------ #
+
+# OS
+.DS_STORE
+Thumbs.db
+*.sh
+*.bat
+
+# Editors
+.history
+.idea
+.vscode/*
+*.sublime-workspace
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Dependencies
+node_modules
+
+# ------------------------------ #
+#           Aurelia.js           #
+# ------------------------------ #
+
+aureliajs/scripts
+aureliajs/src/environment.ts
+aureliajs/dist
+aureliajs/test/coverage-jest
+aureliajs/test/coverage-karma
+aureliajs/.nyc_output
+aureliajs/coverage
+aureliajs/.fusebox
+aureliajs/.cache
+#aureliajs/index.html
+aureliajs/cypress/videos
+aureliajs/cypress/screenshots
+
+# ------------------------------ #
+#           Adonis.js            #
+# ------------------------------ #
+
+adonisjs/.env
+adonisjs/.env.testing
+adonisjs/tmp
+adonisjs/build
+adonisjs/coverage
+adonisjs/public/scripts
+adonisjs/database/development.sqlite
