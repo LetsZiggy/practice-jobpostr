@@ -1,0 +1,20 @@
+<template>
+  <nav class="flex flex-row flex-no-wrap justify-start items-center content-center w-full h-16 bg-gray-800">
+    <a route-href="route: jobs;" class="ml-8 no-underline uppercase text-2xl font-black text-gray-100">JobPostr</a>
+
+    <ul class="flex flex-row flex-no-wrap justify-start items-center content-center h-full ml-auto">
+      <li class="mr-8">
+        <a route-href="route: jobs;" class="no-underline uppercase text-sm text-gray-400 hover:text-gray-100">Jobs</a>
+      </li>
+      <li if.bind="!isSignin" class="mr-8">
+        <a route-href="route: signin;" class="no-underline uppercase text-sm text-gray-400 hover:text-gray-100">Sign-in</a>
+      </li>
+      <li if.bind="!isSignin" class="mr-8">
+        <a route-href="route: signup;" class="no-underline uppercase text-sm text-gray-400 hover:text-gray-100">Sign-up</a>
+      </li>
+      <li if.bind="isSignin" class="mr-8">
+        <button class="no-underline uppercase text-sm text-gray-400 hover:text-gray-100" click.delegate="signout()">Sign-out</button>
+      </li>
+    </ul>
+  </nav>
+</template>
