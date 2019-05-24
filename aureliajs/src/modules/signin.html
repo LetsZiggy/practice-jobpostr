@@ -1,3 +1,15 @@
 <template>
-  <h1>Sign In</h1>
+  <main class="flex flex-row flex-no-wrap justify-center items-center content-center w-full h-full bg-gray-100">
+    <section class="flex flex-col flex-no-wrap justify-center items-center content-center w-2/5 p-4 bg-gray-200">
+      <h1 class="self-start text-3xl font-semibold text-gray-800 underline uppercase">Sign In</h1>
+      <span id="submit-error" class="self-start inline-block invisible pl-2 mb-1 text-sm text-red-500">You've entered wrong credentials</span>
+      <form name="signin" id="signin" class="flex-grow flex flex-col flex-no-wrap justify-start items-start content-start w-full h-auto" submit.delegate="submit($event)">
+        <input-username class="flex flex-col flex-no-wrap justify-start items-start content-start w-full p-2 mb-2" elem-id.one-time="'username'"></input-username>
+        <input-password class="flex flex-col flex-no-wrap justify-start items-start content-start w-full p-2 mb-2" elem-id.one-time="'password'"></input-password>
+        <fieldset class="flex flex-row flex-no-wrap justify-start items-center content-center w-full">
+          <input type="submit" value="Confirm" id="submit" class="p-2 ml-auto mr-8 text-gray-100 uppercase cursor-pointer disabled:cursor-default bg-gray-800 hover:bg-gray-700 disabled:bg-gray-600" disabled.one-way="isDisabled">
+        </fieldset>
+      </form>
+    </section>
+  </main>
 </template>
